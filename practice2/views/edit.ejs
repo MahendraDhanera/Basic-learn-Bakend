@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body class="bg-dark">
+   <div class="mt-5">
+    <a href="/" class="text-white m-3">Go back to home</a>
+    <div class="form  mt-2 p-2">
+        <form action="/edit" method="post">
+            <input type="text" class=" rounded p-2  " style="width: 25rem;" placeholder="previous file name" value="<%= filename %>" name="previous" ><br><br>
+            <input class="rounded p-2" style="width: 25rem;" name="newName" placeholder="New file name"><br>
+            <input type="submit" value="update file name" class="bg-warning text-white rounded mt-3 border-1">
+        </form>
+    </div>
+   </div>
+</body>
+
+</html>

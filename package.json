@@ -1,0 +1,14 @@
+{
+  "name": "backend-in-js",
+  "version": "1.0.0",
+  "description": "Backend in JavaScript",
+  "main": "script.js",
+  "scripts": {
+    "start": " node script.js"
+  },
+  "author": "Mahendra Dhanera",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

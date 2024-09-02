@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body class="bg-dark">
+    <div class=" container text-center  ">
+        <div class="form  mt-5 ">
+            <form action="/create" method="post">
+                <input type="text" class=" rounded p-2 " style="width: 25rem;" placeholder="Entre title"
+                    name="title"><br><br>
+                <textarea class="rounded" style="width: 20rem;  height: 5rem;" name="details" placeholder="Enter Description"></textarea><br>
+                <input type="submit" value="create task" class="bg-primary text-white rounded mt-2">
+            </form>
+        </div>
+        <div class="task mt-4 gap-3 d-flex ">
+            <% if(files.length >0){ %>
+                <% files.forEach(function(val){ %>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= val %></h5>
+                            <p class="card-text">Details:<%= val %></p>
+                                <a href="/file/<%= val %>" class="card-link">Read more</a>
+                                <a href="/edit/<%= val %>" class="card-link">Edit file name</a>
+                        </div>
+                    </div>
+                    <%  }) %>
+
+           <% } else { %>
+           <h3 class="text-white">NO task yet.</h3>
+       <% }%>
+          
+         
+        </div>
+    </div>
+</body>
+
+</html>
